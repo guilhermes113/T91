@@ -16,11 +16,10 @@
                 <th>Ações</th>
                 <th>ID</th>
                 <th>cliente</th>
-                <th>--</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($clientes->get() as $cliente)                
+            @foreach ($cliente->get() as $cliente)                
             <tr>
                 <td>
                     <a href="{{ route('cliente.edit', ['id'=>$cliente->id_cliente]) }}" class="btn btn-success">

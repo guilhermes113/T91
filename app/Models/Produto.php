@@ -21,8 +21,10 @@ class Produto extends Model
     protected $fillable =['id_cliente', 'produto'];
 
     
-        public function tipo()
+        public function cliente()
         {
-            return $this->belongsTo(Tipo::class,'id_cliente','id_cliente');
+            return $this->belongsTo(Produto::class,'id_cliente','id_cliente');
         }
+
+
 }

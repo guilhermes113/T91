@@ -28,7 +28,7 @@
                         @foreach ($clientes as $cliente)
                             <option value="{{$cliente->id_cliente}}"
 
-                                {{$centro && $centro->id_cliente == $cliente->id_cliente ? 'selected' : ''}}
+                                {{$produto && $produto->id_cliente == $cliente->id_cliente ? 'selected' : ''}}
                                 >
                                    {{$cliente->cliente}}
                             </option>

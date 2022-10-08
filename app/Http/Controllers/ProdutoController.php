@@ -11,11 +11,10 @@ class ProdutoController extends Controller
  
     public function index()
     {
-        $produtos = Produto::orderBy('produto')->get();
+        $produtos = Produto::orderBy('produto');
         return view('produto.index')
                 ->with(compact('produtos'));
     }
-
 
     public function create()
     {
@@ -48,7 +47,7 @@ class ProdutoController extends Controller
         $produto = Produto::find($id);
         $clientes = Cliente::orderby('cliente')->get();
         return view('produto.form')
-                ->with(compact('produto','tipos'));
+                ->with(compact('produto','clientes'));
 
 
     }
